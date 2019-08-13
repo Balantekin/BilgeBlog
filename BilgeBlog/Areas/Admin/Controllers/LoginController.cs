@@ -11,7 +11,7 @@ namespace BilgeBlog.Areas.Admin.Controllers
 {
     public class LoginController : Controller
     {
-        private BlogContext db = new BlogContext();
+        private readonly BlogContext db = new BlogContext();
 
         // GET: Admin/Login
         public ActionResult Index()
