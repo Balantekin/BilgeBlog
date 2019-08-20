@@ -23,7 +23,7 @@ namespace BilgeBlog.Areas.Admin.Controllers
         {
             if(ModelState.IsValid)
             {
-                if(db.AdminUsers.Any(x=>x.Email==model.Email&&x.Password==model.Password&&x.IsDeleted==false))
+                if (db.AdminUsers.Any(x => x.Email == model.Email && x.Password == model.Password && x.IsDeleted == false))
                 {
                     FormsAuthentication.SetAuthCookie(model.Email, true);
                     return RedirectToAction("Index", "Home");

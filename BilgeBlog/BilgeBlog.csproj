@@ -94,13 +94,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Content\css\all.min.css" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Admin\Content\fonts\fa-brands-400.svg" />
+    <Content Include="Areas\Admin\Content\fonts\fa-regular-400.svg" />
+    <Content Include="Areas\Admin\Content\fonts\fa-solid-900.svg" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\sb-admin-2.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Areas\Admin\Content\css\sb-admin-2.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Models\Attributes\LoginControl.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -122,6 +133,21 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Content\fonts\fa-brands-400.eot" />
+    <Content Include="Areas\Admin\Content\fonts\fa-brands-400.ttf" />
+    <Content Include="Areas\Admin\Content\fonts\fa-brands-400.woff" />
+    <Content Include="Areas\Admin\Content\fonts\fa-brands-400.woff2" />
+    <Content Include="Areas\Admin\Content\fonts\fa-regular-400.eot" />
+    <Content Include="Areas\Admin\Content\fonts\fa-regular-400.ttf" />
+    <Content Include="Areas\Admin\Content\fonts\fa-regular-400.woff" />
+    <Content Include="Areas\Admin\Content\fonts\fa-regular-400.woff2" />
+    <Content Include="Areas\Admin\Content\fonts\fa-solid-900.eot" />
+    <Content Include="Areas\Admin\Content\fonts\fa-solid-900.ttf" />
+    <Content Include="Areas\Admin\Content\fonts\fa-solid-900.woff" />
+    <Content Include="Areas\Admin\Content\fonts\fa-solid-900.woff2" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutPage1.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -132,9 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Content\" />
-    <Folder Include="Areas\Admin\Views\Login\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Content\img\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
