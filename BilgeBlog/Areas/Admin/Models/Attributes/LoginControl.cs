@@ -12,7 +12,10 @@ namespace BilgeBlog.Areas.Admin.Models.Attributes
         {
             if(!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                filterContext.HttpContext.Response.Redirect("/Admin/Login/Index");
+                if (!HttpContext.Current.Response.IsRequestBeingRedirected)
+                {
+                    filterContext.HttpContext.Response.Redirect("/Admin/Login/Index");
+                }
             }
         }
     }

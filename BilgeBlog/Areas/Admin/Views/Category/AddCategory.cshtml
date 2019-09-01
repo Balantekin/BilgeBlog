@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+@model BilgeBlog.Areas.Admin.Models.DTO.CategoryVM
+
+@Html.Partial("/Areas/Admin/Views/Shared/Partial/FormAlertMessages.cshtml")
+
+@Html.Partial("/Areas/Admin/Views/Category/Partial/CategoryForm.cshtml")

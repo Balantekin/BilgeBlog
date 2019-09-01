@@ -1,0 +1,15 @@
+﻿
+@using BilgeBlog.Areas.Admin.Models.AlertMessages
+
+@if (ViewBag.islemDurum == 1)
+{
+    <div class="alert alert-success" role="alert">
+        @Messages.AddSuccess
+    </div>
+}
+else if (ViewBag.islemDurum == 2)
+{
+    <div class="alert alert-danger" role="alert">
+        @Messages.Required
+    </div>
+}

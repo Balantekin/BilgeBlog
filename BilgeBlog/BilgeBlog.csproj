@@ -99,6 +99,10 @@
     <Content Include="Areas\Admin\Content\fonts\fa-brands-400.svg" />
     <Content Include="Areas\Admin\Content\fonts\fa-regular-400.svg" />
     <Content Include="Areas\Admin\Content\fonts\fa-solid-900.svg" />
+    <Content Include="Scripts\datatables-demo.js" />
+    <Content Include="Scripts\dataTables.bootstrap4.min.css" />
+    <Content Include="Scripts\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\sb-admin-2.min.js" />
@@ -109,9 +113,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Models\AlertMessages\Messages.cs" />
     <Compile Include="Areas\Admin\Models\Attributes\LoginControl.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\BaseVM.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\CategoryVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -148,6 +157,11 @@
     <Content Include="Areas\Admin\Content\fonts\fa-solid-900.woff2" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Partial\FormAlertMessages.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Partial\CategoryForm.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -159,6 +173,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\img\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
