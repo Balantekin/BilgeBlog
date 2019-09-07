@@ -7,7 +7,7 @@
 
         <div class="form-group">
             @Html.LabelFor(x => x.Name)
-            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Kategori Adı" })
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Menü Adı" })
             @Html.ValidationMessageFor(x => x.Name)
 
         </div>
@@ -16,8 +16,10 @@
             @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @placeholder = "Açıklama" })
 
         </div>
-
+                 
+        
         <button type="submit" class="btn btn-primary">Kaydet</button>
 
     </form>
 }
+

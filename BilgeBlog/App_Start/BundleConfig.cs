@@ -18,7 +18,14 @@ namespace BilgeBlog.App_Start
 
                 ));
 
-            bundles.Add(new cs)
+            bundles.Add(new StyleBundle("~/bundles/admin/layoutstyles").Include(
+                "~/Areas/Admin/Content/css/all.min.css",
+                "~/Areas/Admin/Content/css/sb-admin-2.css"
+
+                ));
+
+
+
         }
     }
 }

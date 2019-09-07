@@ -1,0 +1,61 @@
+﻿@model BilgeBlog.Areas.Admin.Models.DTO.SiteMenuVM
+
+@{
+    ViewBag.Title = "AddSiteMenuWithJSON";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<h2>AddSiteMenuWithJSON</h2>
+
+
+@using (Html.BeginForm())
+{
+    <form>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Menü Adı",@id="Name" })
+            @Html.ValidationMessageFor(x => x.Name)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.URL)
+            @Html.TextAreaFor(x => x.URL, new { @class = "form-control", @placeholder = "URL giriniz",@id="URL" })
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.cssClass)
+            @Html.TextAreaFor(x => x.cssClass, new { @class = "form-control", @placeholder = "CSS Class giriniz",@id="cssClass" })
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+
+    </form>
+}
+
+<script>
+    $("button").click(function () {
+        var sitemenu = new Object();
+        sitemenu.Name = $('#Name').val();
+        sitemenu.URL = $('#URL').val();
+        sitemenu.cssClass = $('#cssClass').val();
+
+        $.ajax({
+            url: "/Admin/Sitemenu/AddSiteMenuJSON/",
+            data: sitemenu,
+            type: "POST",
+            success: function () {
+                alert("Site menü başarıyla eklendi");
+            }
+
+        })
+
+    })
+</script>
+
+
+
