@@ -1,7 +1,6 @@
 ﻿@model BilgeBlog.Areas.Admin.Models.DTO.BlogPostVM
 
-    <script src="~/ckeditor5-build-classic/ckeditor.js"></script>
-
+    <script src="~/ckeditor/ckeditor.js"></script>
 
 @using (Html.BeginForm())
 {
@@ -24,12 +23,12 @@
 
     <div class="form-group">
         @Html.LabelFor(x => x.Content)
-        @Html.TextAreaFor(x => x.Content, new { @class = "form-control", @placeholder = "İçerik", @id = "CKeditor" })
+        @Html.TextAreaFor(x => x.Content, new { @class = "ckeditor", @placeholder = "İçerik",@id="ckeditor" })
         @Html.ValidationMessageFor(x => x.Content)
 
     </div>
 
-    
+    <script>CKEDITOR.replace("ckeditor");</script>
 
 
     <button type="submit" class="btn btn-primary">Kaydet</button>
