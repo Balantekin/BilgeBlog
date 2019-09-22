@@ -1,0 +1,13 @@
+﻿@model BilgeBlog.Areas.Admin.Models.DTO.BlogPostVM
+@{
+    ViewBag.Title = "AddBlogPost";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>ADD BLOG POST</h2>
+
+@Html.Partial("/Areas/Admin/Views/Shared/Partial/FormAlertMessages.cshtml")
+
+@Html.Partial("/Areas/Admin/Views/BlogPost/Partial/BlogPostForm.cshtml")
+
+

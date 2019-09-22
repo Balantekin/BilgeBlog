@@ -32,7 +32,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <button class="btn btn-primary">Kaydet</button>
 
     </form>
 }
@@ -40,9 +40,9 @@
 <script>
     $("button").click(function () {
         var sitemenu = new Object();
-        sitemenu.Name = $('#Name').val();
-        sitemenu.URL = $('#URL').val();
-        sitemenu.cssClass = $('#cssClass').val();
+        sitemenu.Name = $("#Name").val();
+        sitemenu.URL = $("#URL").val();
+        sitemenu.cssClass = $("#cssClass").val();
 
         $.ajax({
             url: "/Admin/Sitemenu/AddSiteMenuJSON/",
