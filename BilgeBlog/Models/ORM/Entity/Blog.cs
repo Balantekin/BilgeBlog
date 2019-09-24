@@ -15,17 +15,10 @@ namespace BilgeBlog.Models.ORM.Entity
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
 
-        public int AuthorID { get; set; }
-        [ForeignKey("AuthorID")]
-        public virtual Author Author { get; set; }
-        public int PictureID { get; set; }
-        [ForeignKey("PictureID")]
-        public virtual Picture Picture { get; set; }
+            
         public int NumberofViews { get; set; }
         public int NumberofLikes { get; set; }
         public int CommentID { get; set; }
-        [ForeignKey("CommentID")]
-        public virtual Comment Comment { get; set; }
 
 
     }

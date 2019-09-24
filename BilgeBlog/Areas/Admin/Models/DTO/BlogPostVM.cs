@@ -11,6 +11,7 @@ namespace BilgeBlog.Areas.Admin.Models.DTO
         public string Title { get; set; }
         public string Content { get; set; }
         public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
         public IEnumerable<SelectListItem> DropdownCategories { get; set; }
 
 
