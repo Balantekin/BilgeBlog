@@ -18,26 +18,13 @@
 
 <!-- Page level custom scripts -->
 <script src="~/Scripts/datatables-demo.js"></script>
-
+<script src="~/Scripts/CustomScripts/deleteRecordTable.js"></script>
 <script>
     $(document).ready(function () {
         $('#myTable').DataTable();
     });</script>
 
-<script>
-    function Delete(id) {
-        $.ajax({
-            url: "/Admin/Category/DeleteCategory/" + id,
-            type:"POST",
-            success: function (result) {
-                $("#a_"+ id).fadeOut();
-            }
 
-            //ikinci yol
-            //data:id,
-        })
-    }
-</script>
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -81,7 +68,7 @@
                                 <td>@item.ID</td>
                                 <td>@item.CategoryName</td>
                                 <td>@item.Title</td>
-                                <td><i class="fas fa-trash" style="cursor:pointer" onclick="Delete(@item.ID)"></i></td>
+                                <td><i class="fas fa-trash" style="cursor:pointer" onclick="Delete('/Admin/BlogPost/DeleteBlogPost/',@item.ID)"></i></td>
                                 <td><a href="/Admin/BlogPost/UpdateBlogPost/@item.ID"> Güncelle </a></td>
                             </tr>
                         }

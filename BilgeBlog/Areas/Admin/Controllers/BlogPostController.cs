@@ -101,5 +101,15 @@ namespace BilgeBlog.Areas.Admin.Controllers
 
         }
 
+        public JsonResult DeleteBlogPost(int id)
+        {
+            Blog blog = db.Blogs.FirstOrDefault(x => x.ID == id);
+            blog.IsDeleted = true;
+            blog.DeleteDate = DateTime.Now;
+            db.SaveChanges();
+
+            return Json("");
+        }
+
     }
 }
