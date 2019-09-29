@@ -14,6 +14,7 @@ namespace BilgeBlog.Areas.Admin.Controllers
         public BlogContext db;
         public BaseController()
         {
+            ViewBag.User = System.Web.HttpContext.Current.User.Identity.Name.ToString();
             db = new BlogContext();
         }
 
