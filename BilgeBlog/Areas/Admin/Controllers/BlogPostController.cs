@@ -3,6 +3,7 @@ using BilgeBlog.Areas.Admin.Models.Services.HTMLDataSourceServices;
 using BilgeBlog.Models.ORM.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -43,10 +44,26 @@ namespace BilgeBlog.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string fileName = "";
+                foreach (string name in Request.Files)
+                {
+                    model.PostImage = Request.Files[name];
+                    string extension = Path.GetExtension(Request.Files[name].FileName);
+                    if(extension=="jpg" ||extension=="png"||extension=="jpeg")
+                    {
+                        string imageNumber = Guid.NewGuid().ToString();
+                        fileName = imageNumber + model.PostImage.FileName;
+                        model.PostImage.SaveAs(Server.MapPath("~/Areas/Admin/Content/Site/Images/blogpost/" + fileName));
+                    }
+                   
+                        
+                }
+
                 Blog blog = new Blog();
                 blog.CategoryID = model.CategoryID;
                 blog.Title = model.Title;
                 blog.Content = model.Content;
+                blog.ImagePath = fileName;
 
                 db.Blogs.Add(blog);
                 db.SaveChanges();

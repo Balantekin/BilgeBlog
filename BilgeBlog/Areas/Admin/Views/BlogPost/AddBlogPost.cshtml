@@ -8,6 +8,13 @@
 
 @Html.Partial("/Areas/Admin/Views/Shared/Partial/FormAlertMessages.cshtml")
 
-@Html.Partial("/Areas/Admin/Views/BlogPost/Partial/BlogPostForm.cshtml")
+<script src="~/ckeditor/ckeditor.js"></script>
+
+@using (Html.BeginForm("AddBlogPost", "BlogPost", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+
+    @Html.Partial("/Areas/Admin/Views/BlogPost/Partial/BlogPostForm.cshtml")
+}
+
 
 

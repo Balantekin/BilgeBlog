@@ -10,6 +10,9 @@
 
 @Html.Partial("/Areas/Admin/Views/Shared/Partial/FormAlertMessages.cshtml")
 
-@Html.Partial("/Areas/Admin/Views/BlogPost/Partial/BlogPostForm.cshtml")
 
+@using (Html.BeginForm("UpdateBlogPost", "BlogPost", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
 
+    @Html.Partial("/Areas/Admin/Views/BlogPost/Partial/BlogPostForm.cshtml")
+}

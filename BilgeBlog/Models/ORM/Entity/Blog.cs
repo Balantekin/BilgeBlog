@@ -15,7 +15,8 @@ namespace BilgeBlog.Models.ORM.Entity
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
 
-            
+        public string ImagePath { get; set; }
+
         public int NumberofViews { get; set; }
         public int NumberofLikes { get; set; }
         public int CommentID { get; set; }
