@@ -14,6 +14,7 @@ namespace BilgeBlog
         protected void Application_Start()
         {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleConfig.SiteBundles(BundleTable.Bundles);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Content\css\all.min.css" />
+    <Content Include="Areas\Admin\Content\Site\Images\blogpost\beeb76a9-256e-4cc1-b62b-e3273ea3fa65MVC Blog Projesi - 3 %28EK%29.jpg" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\build-config.js" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -421,6 +422,14 @@
     <Content Include="ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="ckeditor\styles.js" />
     <Content Include="ckeditor\vendor\promise.js" />
+    <Content Include="Content\all.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\clean-blog.min.css" />
+    <Content Include="Content\Images\about-bg.jpg" />
+    <Content Include="Content\Images\contact-bg.jpg" />
+    <Content Include="Content\Images\home-bg.jpg" />
+    <Content Include="Content\Images\post-bg.jpg" />
+    <Content Include="Content\Images\post-sample-image.jpg" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Areas\Admin\Content\fonts\fa-brands-400.svg" />
     <Content Include="Areas\Admin\Content\fonts\fa-regular-400.svg" />
@@ -436,6 +445,9 @@
     <Content Include="Scripts\sb-admin-2.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Areas\Admin\Content\css\sb-admin-2.css" />
+    <Content Include="Scripts\SiteScripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\SiteScripts\clean-blog.min.js" />
+    <Content Include="Scripts\SiteScripts\jquery.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -456,6 +468,9 @@
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Areas\Admin\Models\DTO\SiteMenuVM.cs" />
     <Compile Include="Areas\Admin\Models\Services\HTMLDataSourceServices\DropDownServices.cs" />
+    <Compile Include="Controllers\SiteBaseController.cs" />
+    <Compile Include="Controllers\SiteBlogController.cs" />
+    <Compile Include="Controllers\SiteHomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -469,6 +484,8 @@
     <Compile Include="Models\ORM\Entity\IPLog.cs" />
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
     <Compile Include="Models\ORM\Entity\Tags.cs" />
+    <Compile Include="Models\VM\CommentVM.cs" />
+    <Compile Include="Models\VM\SiteBlogPostVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -516,6 +533,13 @@
     <Content Include="Areas\Admin\Views\BlogPost\Index.cshtml" />
     <Content Include="Areas\Admin\Views\BlogPost\UpdateBlogPost.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\SiteLayout.cshtml" />
+    <Content Include="Views\SiteHome\Index.cshtml" />
+    <Content Include="Views\Shared\Partials\HeaderPartial.cshtml" />
+    <Content Include="Views\Shared\Partials\FooterPartial.cshtml" />
+    <Content Include="Views\SiteBlog\Index.cshtml" />
+    <Content Include="Views\Shared\Partials\NavigationPartial.cshtml" />
+    <Content Include="Views\Shared\Partials\CommentPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -526,9 +550,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\img\" />
-    <Folder Include="Areas\Admin\Content\Site\Images\blogpost\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

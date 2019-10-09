@@ -25,7 +25,24 @@ namespace BilgeBlog.App_Start
                 ));
 
 
+        }
+        public static void SiteBundles(BundleCollection bundles)
+        {
+            bundles.Add(new ScriptBundle("~/bundles/site/layout").Include(
+                "~/Scripts/SiteScripts/jquery.min.js",
+                "~/Scripts/SiteScripts/clean-blog.min.js",
+                "~/Scripts/SiteScripts/bootstrap.bundle.js"
 
+
+                ));
+
+            bundles.Add(new StyleBundle("~/bundles/site/layoutstyles").Include(
+                "~/Content/all.min.css",
+                "~/Content/bootstrap.min.css",
+                "~/Content/clean-blog.min.css"
+
+
+                ));
         }
     }
 }
