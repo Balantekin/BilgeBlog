@@ -13,7 +13,7 @@ namespace BilgeBlog.Models.VM
         public string Title { get; set; }
         [Display(Name ="İçerik")]
         public string Content { get; set; }
-
+        public int BlogPostid { get; set; }
 
     }
 }

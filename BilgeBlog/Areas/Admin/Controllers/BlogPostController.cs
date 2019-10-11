@@ -1,6 +1,7 @@
 ﻿using BilgeBlog.Areas.Admin.Models.DTO;
 using BilgeBlog.Areas.Admin.Models.Services.HTMLDataSourceServices;
 using BilgeBlog.Models.ORM.Entity;
+using BilgeBlog.Models.VM;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,7 +19,8 @@ namespace BilgeBlog.Areas.Admin.Controllers
             {
                 Title = x.Title,
                 CategoryName=x.Category.CategoryName,
-                ID=x.ID
+               ID=x.ID
+                
                 
             }).ToList();
 

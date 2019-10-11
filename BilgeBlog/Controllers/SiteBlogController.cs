@@ -12,6 +12,7 @@ namespace BilgeBlog.Controllers
     public class SiteBlogController : SiteBaseController
     {
         // GET: SiteBlog
+        
         public ActionResult Index(int id)
         {
             Blog blog = db.Blogs.FirstOrDefault(x => x.ID == id);
@@ -20,9 +21,21 @@ namespace BilgeBlog.Controllers
             model.Title = blog.Title;
             model.PostImagePath = blog.ImagePath;
             model.Category = blog.Category.CategoryName;
-
-
+            
             return View(model);
         }
+
+        [HttpPost]
+        public ActionResult AddComment(CommentVM model)
+        {
+            Comment comment = new Comment();
+            comment.Title = model.Title;
+            comment.Description = model.Content;
+            comment.BlogID = model.BlogPostid;
+            db.Comments.Add(comment);
+            db.SaveChanges();
+            return RedirectToAction("Index","SiteBlog",new { id=model.BlogPostid});
+        }
+
     }
 }

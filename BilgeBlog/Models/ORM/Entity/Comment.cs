@@ -10,8 +10,17 @@ namespace BilgeBlog.Models.ORM.Entity
     {
         public string Title { get; set; }
         public string Description { get; set; }
-
-        public bool isActive { get; set; }
+        private bool _isActive = false;
+        public bool isActive {
+            get
+            {
+                return _isActive;
+            }
+            set 
+            {
+                _isActive = value;
+            }
+        }
         public int BlogID { get; set; }
         [ForeignKey("BlogID")]
         public Blog Blog { get; set; }

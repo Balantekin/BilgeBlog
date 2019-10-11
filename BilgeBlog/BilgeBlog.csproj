@@ -485,6 +485,7 @@
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
     <Compile Include="Models\ORM\Entity\Tags.cs" />
     <Compile Include="Models\VM\CommentVM.cs" />
+    <Compile Include="Models\VM\SiteBaseVM.cs" />
     <Compile Include="Models\VM\SiteBlogPostVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -540,6 +541,9 @@
     <Content Include="Views\SiteBlog\Index.cshtml" />
     <Content Include="Views\Shared\Partials\NavigationPartial.cshtml" />
     <Content Include="Views\Shared\Partials\CommentPartial.cshtml" />
+    <Content Include="Views\Shared\Partials\MainContentPartial.cshtml" />
+    <Content Include="Views\SiteHome\About.cshtml" />
+    <Content Include="Views\SiteHome\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
