@@ -2,12 +2,16 @@
 
 @{
     ViewBag.Title = "Index";
+
 }
 
 @model BilgeBlog.Models.VM.SiteBlogPostVM
 
 @Scripts.Render("~/bundles/site/layout")
-@Styles.Render("~/bundles/site/layoutstyles");
+@Styles.Render("~/bundles/site/layoutstyles")
+
+@Html.Partial("Partials/NavigationPartial")
+
 
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('/Areas/Admin/Content/Site/Images/blogpost/@Model.PostImagePath')">

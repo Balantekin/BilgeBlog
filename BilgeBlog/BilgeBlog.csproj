@@ -434,10 +434,12 @@
     <Content Include="Areas\Admin\Content\fonts\fa-brands-400.svg" />
     <Content Include="Areas\Admin\Content\fonts\fa-regular-400.svg" />
     <Content Include="Areas\Admin\Content\fonts\fa-solid-900.svg" />
+    <Content Include="Scripts\contact_me.js" />
     <Content Include="Scripts\CustomScripts\deleteRecordTable.js" />
     <Content Include="Scripts\datatables-demo.js" />
     <Content Include="Scripts\dataTables.bootstrap4.min.css" />
     <Content Include="Scripts\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\jqBootstrapValidation.js" />
     <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\jquery.min.js" />
@@ -481,10 +483,12 @@
     <Compile Include="Models\ORM\Entity\Blog.cs" />
     <Compile Include="Models\ORM\Entity\Category.cs" />
     <Compile Include="Models\ORM\Entity\Comment.cs" />
+    <Compile Include="Models\ORM\Entity\Contact.cs" />
     <Compile Include="Models\ORM\Entity\IPLog.cs" />
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
     <Compile Include="Models\ORM\Entity\Tags.cs" />
     <Compile Include="Models\VM\CommentVM.cs" />
+    <Compile Include="Models\VM\ContactVM.cs" />
     <Compile Include="Models\VM\SiteBaseVM.cs" />
     <Compile Include="Models\VM\SiteBlogPostVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

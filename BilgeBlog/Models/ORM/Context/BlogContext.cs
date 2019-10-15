@@ -26,6 +26,7 @@ namespace BilgeBlog.Models.ORM.Context
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Tags> Tags { get; set; }
         public DbSet<IPLog> IPLogs { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
 
 

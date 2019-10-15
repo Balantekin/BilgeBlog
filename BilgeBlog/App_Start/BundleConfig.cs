@@ -31,7 +31,9 @@ namespace BilgeBlog.App_Start
             bundles.Add(new ScriptBundle("~/bundles/site/layout").Include(
                 "~/Scripts/SiteScripts/jquery.min.js",
                 "~/Scripts/SiteScripts/clean-blog.min.js",
-                "~/Scripts/SiteScripts/bootstrap.bundle.js"
+                "~/Scripts/SiteScripts/bootstrap.bundle.js",
+                "~/Scripts/jqBootstrapValidation.js",
+                "~/Scripts/contact_me.js"
 
 
                 ));
@@ -44,5 +46,8 @@ namespace BilgeBlog.App_Start
 
                 ));
         }
+
+              
+      
     }
 }
