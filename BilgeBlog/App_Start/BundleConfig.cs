@@ -19,7 +19,7 @@ namespace BilgeBlog.App_Start
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/admin/layoutstyles").Include(
-                "~/Areas/Admin/Content/css/all.min.css",
+                "~/Areas/Admin/Content/vendor/fontawesome-free/css/all.min.css",
                 "~/Areas/Admin/Content/css/sb-admin-2.css"
 
                 ));
@@ -39,8 +39,8 @@ namespace BilgeBlog.App_Start
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/site/layoutstyles").Include(
-                "~/Content/all.min.css",
-                "~/Content/bootstrap.min.css",
+                "~/Content/vendor/fontawesome-free/css/all.min.css",
+                "~/Content/vendor/bootstrap/css/bootstrap.min.css",
                 "~/Content/clean-blog.min.css"
 
 

@@ -60,7 +60,7 @@ namespace BilgeBlog.Controllers
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 client.UseDefaultCredentials = false;
                 //yeni email adresi alınıp şifre değiştirilecek
-                client.Credentials = new NetworkCredential("balantekinbugra@gmail.com", "xxxx");
+                client.Credentials = new NetworkCredential("balantekinbugra@gmail.com", "20493260Aq");
                 client.EnableSsl = true;
                 MailMessage message = new MailMessage(model.Email,"balantekinbugra@gmail.com");
                 message.Body = model.Message;
@@ -68,11 +68,13 @@ namespace BilgeBlog.Controllers
 
                 client.Send(message);
 
+                ViewBag.MailDurum = 1;
+
                 return View();
             }
             else
             {
-                
+                ViewBag.MailDurum = 2;
                 return View();
             }
 
